@@ -73,7 +73,7 @@ namespace HowrashokDescktop.View {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/HowrashokDescktop;V1.0.0.0;component/view/addeditproductview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/HowrashokDescktop;component/view/addeditproductview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\View\AddEditProductView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

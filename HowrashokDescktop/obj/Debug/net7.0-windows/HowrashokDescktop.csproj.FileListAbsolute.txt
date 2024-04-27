@@ -84,3 +84,5 @@ C:\Users\Dmitrii\Desktop\Проекты\HowrashokDescktop\HowrashokDescktop\obj\
 C:\Users\Dmitrii\Desktop\Проекты\HowrashokDescktop\HowrashokDescktop\obj\Debug\net7.0-windows\HowrashokDescktop.pdb
 C:\Users\Dmitrii\Desktop\Проекты\HowrashokDescktop\HowrashokDescktop\obj\Debug\net7.0-windows\HowrashokDescktop.genruntimeconfig.cache
 C:\Users\Dmitrii\Desktop\Проекты\HowrashokDescktop\HowrashokDescktop\obj\Debug\net7.0-windows\ref\HowrashokDescktop.dll
+C:\Users\Dmitrii\Desktop\Проекты\HowrashokDescktop\HowrashokDescktop\bin\Debug\net7.0-windows\LiveCharts.dll
+C:\Users\Dmitrii\Desktop\Проекты\HowrashokDescktop\HowrashokDescktop\bin\Debug\net7.0-windows\LiveCharts.Wpf.dll

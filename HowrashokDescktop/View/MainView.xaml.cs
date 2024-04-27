@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HowrashokDescktop.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,11 @@ namespace HowrashokDescktop.View
     /// </summary>
     public partial class MainView : Page
     {
+        private MainViewViewModel MainViewViewModel { get; set; }
         public MainView()
         {
             InitializeComponent();
+            MainViewViewModel = new();
         }
     }
 }

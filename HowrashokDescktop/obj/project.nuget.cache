@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "r0hNBwsF5wLwFioK88Fs+VnCY7NRyFOIL/uNJyYumQ6QI+287qxgA4+BG7TmlYi1iNRYxlANw9GimzbgQkVOwg==",
+  "dgSpecHash": "k90/D3JkTp9Qg7dj5VUo8Xt/A5ebx+4okRVpBp1fFk2anL2fX/f3vrdp/UzutTYIQLsX3FlB1pVLmDgghEgaxw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Dmitrii\\Desktop\\Проекты\\HowrashokDescktop\\HowrashokDescktop\\HowrashokDescktop.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dmitrii\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Dmitrii\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
     "C:\\Users\\Dmitrii\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\Dmitrii\\.nuget\\packages\\livecharts\\0.9.7\\livecharts.0.9.7.nupkg.sha512",
+    "C:\\Users\\Dmitrii\\.nuget\\packages\\livecharts.wpf\\0.9.7\\livecharts.wpf.0.9.7.nupkg.sha512",
     "C:\\Users\\Dmitrii\\.nuget\\packages\\materialdesigncolors\\3.0.0\\materialdesigncolors.3.0.0.nupkg.sha512",
     "C:\\Users\\Dmitrii\\.nuget\\packages\\materialdesignthemes\\3.2.0\\materialdesignthemes.3.2.0.nupkg.sha512",
     "C:\\Users\\Dmitrii\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
@@ -77,6 +79,26 @@
       "warningLevel": 1,
       "message": "Версия обнаруженного пакета нарушает ограничение зависимости: MaterialDesignThemes 3.2.0 требуется MaterialDesignColors (>= 1.2.7 && < 2.0.0), но в результате разрешения получена версия MaterialDesignColors 3.0.0.",
       "libraryId": "MaterialDesignColors",
+      "targetGraphs": [
+        "net7.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Пакет \"LiveCharts 0.9.7\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\", а не целевой платформы проекта \"net7.0-windows7.0\". Этот пакет может быть не полностью совместим с вашим проектом.",
+      "libraryId": "LiveCharts",
+      "targetGraphs": [
+        "net7.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Пакет \"LiveCharts.Wpf 0.9.7\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\", а не целевой платформы проекта \"net7.0-windows7.0\". Этот пакет может быть не полностью совместим с вашим проектом.",
+      "libraryId": "LiveCharts.Wpf",
       "targetGraphs": [
         "net7.0-windows7.0"
       ]
