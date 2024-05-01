@@ -1,4 +1,5 @@
 ﻿<Page x:Class="HowrashokDescktop.View.MainView"
+      Background="#C7E3F4"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:vm="clr-namespace:HowrashokDescktop.ViewModel"
       xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
@@ -15,10 +16,10 @@
     </Page.DataContext>
 
     <Grid>
-        <StackPanel>
-            <TextBlock Text="Статистика по оценкам" Foreground="#5893B9" x:Name="StatisticText" MouseLeftButtonUp="StatisticText_MouseLeftButtonUp"/>
+        <StackPanel Margin="5">
+            <TextBlock Text="Статистика по оценкам" x:Name="StatisticText" MouseLeftButtonUp="StatisticText_MouseLeftButtonUp"/>
             <lvc:PieChart Series="{Binding AroundChartData}" Height="150"/>
-            <TextBlock Text="Статистика по продажам за последние 4 месяца" Foreground="#5893B9"/>
+            <TextBlock Text="Статистика по продажам за последние 4 месяца"/>
             <lvc:CartesianChart Series="{Binding StatisticCharData}" Height="150"/>
         </StackPanel>
     </Grid>
