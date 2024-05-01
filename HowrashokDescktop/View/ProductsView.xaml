@@ -29,7 +29,7 @@
                     <TextBlock Text="Добавить" />
                 </Button>
             </StackPanel>
-            <ListView Height="350" ItemsSource="{Binding ProductsList}" 
+            <ListView Height="300" ItemsSource="{Binding ProductsList}" 
                       x:Name="ProductsListView" ScrollViewer.CanContentScroll="False" Width="600">
                 <ListView.ItemTemplate>
                     <DataTemplate>

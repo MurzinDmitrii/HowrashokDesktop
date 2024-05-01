@@ -1,4 +1,5 @@
-﻿using HowrashokDescktop.View;
+﻿using HowrashokDescktop.Classes;
+using HowrashokDescktop.View;
 using HowrashokDescktop.ViewModel;
 using System.ComponentModel;
 using System.Text;
@@ -23,6 +24,7 @@ namespace HowrashokDescktop
         public MainWindow()
         {
             InitializeComponent();
+            GlobalClass.Photopath = "C:\\Users\\Dmitrii\\Desktop\\Проекты\\HowrashokShop\\HowrashokShop\\wwwroot\\Images\\";
             MainViewModel = new();
         }
     }

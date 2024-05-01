@@ -86,3 +86,7 @@ C:\Users\Dmitrii\Desktop\Проекты\HowrashokDescktop\HowrashokDescktop\obj\
 C:\Users\Dmitrii\Desktop\Проекты\HowrashokDescktop\HowrashokDescktop\obj\Debug\net7.0-windows\ref\HowrashokDescktop.dll
 C:\Users\Dmitrii\Desktop\Проекты\HowrashokDescktop\HowrashokDescktop\bin\Debug\net7.0-windows\LiveCharts.dll
 C:\Users\Dmitrii\Desktop\Проекты\HowrashokDescktop\HowrashokDescktop\bin\Debug\net7.0-windows\LiveCharts.Wpf.dll
+C:\Users\Dmitrii\Desktop\Проекты\HowrashokDescktop\HowrashokDescktop\obj\Debug\net7.0-windows\View\PhotosView.g.cs
+C:\Users\Dmitrii\Desktop\Проекты\HowrashokDescktop\HowrashokDescktop\obj\Debug\net7.0-windows\View\PhotosView.baml
+C:\Users\Dmitrii\Desktop\Проекты\HowrashokDescktop\HowrashokDescktop\obj\Debug\net7.0-windows\View\CommentsView.g.cs
+C:\Users\Dmitrii\Desktop\Проекты\HowrashokDescktop\HowrashokDescktop\obj\Debug\net7.0-windows\View\CommentsView.baml

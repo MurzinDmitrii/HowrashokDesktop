@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 C:\Users\Dmitrii\Desktop\Проекты\HowrashokDescktop\HowrashokDescktop\App.xaml
-61609695728
+8207225692
 
-362126385818
+43205945031
 242-789802100
-MainWindow.xaml;View\AddEditOrdersView.xaml;View\AddEditProductView.xaml;View\MainView.xaml;View\OrdersView.xaml;View\ProductsView.xaml;
+MainWindow.xaml;View\AddEditOrdersView.xaml;View\AddEditProductView.xaml;View\CommentsView.xaml;View\MainView.xaml;View\OrdersView.xaml;View\PhotosView.xaml;View\ProductsView.xaml;
 
-True
+False
 

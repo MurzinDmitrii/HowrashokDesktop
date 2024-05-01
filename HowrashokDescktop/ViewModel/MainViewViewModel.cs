@@ -7,6 +7,10 @@ using System.Text;
 using System.Threading.Tasks;
 using LiveCharts.Definitions.Series;
 using HowrashokDescktop.Model;
+using System.Windows.Input;
+using HowrashokDescktop.Classes;
+using HowrashokDescktop.View;
+using System.Windows;
 
 namespace HowrashokDescktop.ViewModel
 {

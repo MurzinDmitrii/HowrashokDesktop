@@ -16,9 +16,9 @@
 
     <Grid>
         <StackPanel>
-            <TextBlock Text="Статистика по оценкам"/>
+            <TextBlock Text="Статистика по оценкам" Foreground="#5893B9" x:Name="StatisticText" MouseLeftButtonUp="StatisticText_MouseLeftButtonUp"/>
             <lvc:PieChart Series="{Binding AroundChartData}" Height="150"/>
-            <TextBlock Text="Статистика по продажам за последние 4 месяца"/>
+            <TextBlock Text="Статистика по продажам за последние 4 месяца" Foreground="#5893B9"/>
             <lvc:CartesianChart Series="{Binding StatisticCharData}" Height="150"/>
         </StackPanel>
     </Grid>

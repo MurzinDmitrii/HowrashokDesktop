@@ -27,5 +27,11 @@ namespace HowrashokDescktop.View
             InitializeComponent();
             MainViewViewModel = new();
         }
+
+        private void StatisticText_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            var mainWindowViewModel = Application.Current.MainWindow.DataContext as MainViewModel;
+            mainWindowViewModel.CurrentPage = new CommentsView();
+        }
     }
 }

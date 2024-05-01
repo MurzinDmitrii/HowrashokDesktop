@@ -38,10 +38,18 @@ namespace HowrashokDescktop.ViewModel
                 product.Costs = new List<Cost>();
 
             SaveButtonCommand = new RelayCommand(_ => SaveButtonClick());
-            CostSet = Math.Round(DB.context.
+            PhotoButtonCommand = new RelayCommand(_ => PhotoButtonClick());
+            try
+            {
+                CostSet = Math.Round(DB.context.
                                     Costs.
                                     OrderByDescending(c => c.DateOfSetting).
                                     FirstOrDefault(c => c.ProductId == Product.Id).Size, 2).ToString();
+            }
+            catch
+            {
+                CostSet = Math.Round(0.00, 2).ToString();
+            }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -52,6 +60,14 @@ namespace HowrashokDescktop.ViewModel
         }
 
         public ICommand SaveButtonCommand { get; }
+        public ICommand PhotoButtonCommand { get; }
+
+        private void PhotoButtonClick()
+        {
+            SaveButtonClick();
+            var mainWindowViewModel = Application.Current.MainWindow.DataContext as MainViewModel;
+            mainWindowViewModel.CurrentPage = new PhotosView(Product.Id);
+        }
 
         private void SaveButtonClick()
         {
@@ -59,18 +75,31 @@ namespace HowrashokDescktop.ViewModel
             {
                 if (Product.Id == 0)
                 {
-                    DB.context.Add(Product);
+                    DB.context.Products.Add(Product);
                 }
                 else
                 {
-                    DB.context.Update(Product);
+                    DB.context.Products.Update(Product);
                 }
-                DB.context.Costs.Add(new Cost()
+                DB.context.SaveChanges();
+                try
                 {
-                    DateOfSetting = DateTime.Now,
-                    Size = Convert.ToDecimal(CostSet),
-                    ProductId = Product.Id
-                });
+                    DB.context.Costs.Add(new Cost()
+                    {
+                        DateOfSetting = DateTime.Now,
+                        Size = Convert.ToDecimal(CostSet),
+                        ProductId = Product.Id
+                    });
+                }
+                catch
+                {
+                    DB.context.Costs.Add(new Cost()
+                    {
+                        DateOfSetting = DateTime.Now,
+                        Size = 100,
+                        ProductId = Product.Id
+                    });
+                }
                 DB.context.SaveChanges();
                 var mainWindowViewModel = Application.Current.MainWindow.DataContext as MainViewModel;
                 mainWindowViewModel.CurrentPage = new ProductsView();

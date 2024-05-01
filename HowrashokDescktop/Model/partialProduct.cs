@@ -14,7 +14,7 @@ namespace HowrashokDescktop.Model
     {
         public string MainPhoto { 
             get {
-                string photopath = "C:\\Users\\Dmitrii\\Desktop\\Проекты\\HowrashokShop\\HowrashokShop\\wwwroot\\Images\\";
+                string photopath = GlobalClass.Photopath;
              if (Photos.Count != 0)
              {
                  return photopath + Photos.FirstOrDefault().Photopath;

@@ -51,6 +51,18 @@
                 MaxLength="500"
                 materialDesign:HintAssist.Hint="Цена"/>
             <Button
+                x:Name="PhotoButton"
+                Command="{Binding PhotoButtonCommand}"
+                Margin="5"
+                Height="30"
+                materialDesign:ButtonAssist.CornerRadius="15"
+                Background="#5893B9"
+                Width="100"
+                Style="{StaticResource MaterialDesignRaisedDarkButton}"
+                ToolTip="Редактировать фото товара">
+                <TextBlock Text="Фото" />
+            </Button>
+            <Button
                 x:Name="MainButton"
                 Command="{Binding SaveButtonCommand}"
                 Margin="5"
