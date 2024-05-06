@@ -13,16 +13,28 @@
 
     <Grid>
         <StackPanel>
-            <Button Command="{Binding AddButtonCommand}"
-                Margin="5"
-                Height="30"
-                materialDesign:ButtonAssist.CornerRadius="15"
-                Background="#5893B9"
-                Width="100"
-                Style="{StaticResource MaterialDesignRaisedDarkButton}"
-                ToolTip="Добавить товар">
-                <TextBlock Text="Добавить" />
-            </Button>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Command="{Binding AddButtonCommand}"
+                    Margin="5"
+                    Height="30"
+                    materialDesign:ButtonAssist.CornerRadius="15"
+                    Background="#5893B9"
+                    Width="100"
+                    Style="{StaticResource MaterialDesignRaisedDarkButton}"
+                    ToolTip="Добавить товар">
+                    <TextBlock Text="Добавить" />
+                </Button>
+                <Button Command="{Binding BackButtonCommand}"
+                    Margin="5"
+                    Height="30"
+                    materialDesign:ButtonAssist.CornerRadius="15"
+                    Background="#5893B9"
+                    Width="100"
+                    Style="{StaticResource MaterialDesignRaisedDarkButton}"
+                    ToolTip="Добавить товар">
+                    <TextBlock Text="Назад" />
+                </Button>
+            </StackPanel>
             <ListView ItemsSource="{Binding PhotosList}" Height="300" ScrollViewer.CanContentScroll="False">
                 <ListView.ItemTemplate>
                     <DataTemplate>

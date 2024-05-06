@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "k90/D3JkTp9Qg7dj5VUo8Xt/A5ebx+4okRVpBp1fFk2anL2fX/f3vrdp/UzutTYIQLsX3FlB1pVLmDgghEgaxw==",
+  "dgSpecHash": "y4wH8RWAPWAmrDF7DbwABOrd+gzv+vzUbOgSCMgSWaAxamRSJE/EdYVNcrlZjftT+bym57ZjLWbBGHOkeBjwpQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Dmitrii\\Desktop\\Проекты\\HowrashokDescktop\\HowrashokDescktop\\HowrashokDescktop.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dmitrii\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Dmitrii\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
+    "C:\\Users\\Dmitrii\\.nuget\\packages\\hardcodet.notifyicon.wpf\\1.1.0\\hardcodet.notifyicon.wpf.1.1.0.nupkg.sha512",
     "C:\\Users\\Dmitrii\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Dmitrii\\.nuget\\packages\\livecharts\\0.9.7\\livecharts.0.9.7.nupkg.sha512",
     "C:\\Users\\Dmitrii\\.nuget\\packages\\livecharts.wpf\\0.9.7\\livecharts.wpf.0.9.7.nupkg.sha512",

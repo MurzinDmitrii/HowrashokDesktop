@@ -25,6 +25,7 @@ namespace HowrashokDescktop.ViewModel
             this.productId = productId;
             Load();
             AddButtonCommand = new RelayCommand(_ => AddButtonClick());
+            BackButtonCommand = new RelayCommand(_ => BackButtonClick());
         }
 
         private void Load()
@@ -41,6 +42,7 @@ namespace HowrashokDescktop.ViewModel
         }
 
         public ICommand AddButtonCommand { get; }
+        public ICommand BackButtonCommand { get; }
 
         private void AddButtonClick()
         {
@@ -82,6 +84,12 @@ namespace HowrashokDescktop.ViewModel
                 DB.context.SaveChanges();
             }
             Load();
+        }
+
+        private void BackButtonClick()
+        {
+            var mainWindowViewModel = Application.Current.MainWindow.DataContext as MainViewModel;
+            mainWindowViewModel.CurrentPage = new AddEditProductView(DB.context.Products.FirstOrDefault(c => c.Id == productId));
         }
     }
 }

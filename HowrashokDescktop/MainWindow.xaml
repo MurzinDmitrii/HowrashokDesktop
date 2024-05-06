@@ -1,4 +1,5 @@
 ﻿<Window x:Class="HowrashokDescktop.MainWindow"
+        xmlns:tb="http://www.hardcodet.net/taskbar"
         xmlns:vm="clr-namespace:HowrashokDescktop.ViewModel"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:System="clr-namespace:System;assembly=mscorlib"
@@ -9,15 +10,25 @@
         xmlns:local="clr-namespace:HowrashokDescktop"
         mc:Ignorable="d"
         Background="#91BBD4"
-        Title="MainWindow" Height="450" Width="800">
+        StateChanged="Window_StateChanged"
+        Title="HowrashokShop" Height="450" Width="800">
     <Window.Resources>
         <System:Double x:Key="ButtonHeight">30</System:Double>
     </Window.Resources>
-    <Window.DataContext>
-        <vm:MainViewModel />
+    <Window.DataContext> 
+        <vm:MainViewModel/>
     </Window.DataContext>
     <Viewbox>
         <Grid>
+            <tb:TaskbarIcon Visibility="Visible" ToolTipText="Цифра Elkon" IconSource="logo.ico"
+                TrayLeftMouseDown="TaskbarIcon_TrayLeftMouseDown">
+                <tb:TaskbarIcon.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem x:Name="TreyBar" Click="TreyBar_Click"
+                        Header="Выйти" />
+                    </ContextMenu>
+                </tb:TaskbarIcon.ContextMenu>
+            </tb:TaskbarIcon>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
                 <StackPanel x:Name="AfterAuthPanel" Orientation="Vertical" VerticalAlignment="Center" Width="200">
                     <Button

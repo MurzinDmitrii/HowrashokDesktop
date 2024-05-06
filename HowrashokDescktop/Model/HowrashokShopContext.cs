@@ -45,6 +45,8 @@ public partial class HowrashokShopContext : DbContext
 
     public virtual DbSet<Product> Products { get; set; }
 
+    public virtual DbSet<Status> Statuses { get; set; }
+
     public virtual DbSet<TablePart> TableParts { get; set; }
 
     public virtual DbSet<Theme> Themes { get; set; }
@@ -266,6 +268,10 @@ public partial class HowrashokShopContext : DbContext
                 .HasForeignKey(d => d.ClientId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__Order__ClientID__2739D489");
+
+            entity.HasOne(d => d.Status).WithMany(p => p.Orders)
+                .HasForeignKey(d => d.StatusId)
+                .HasConstraintName("FK__Order__StatusId__0A688BB1");
         });
 
         modelBuilder.Entity<Photo>(entity =>
@@ -323,6 +329,18 @@ public partial class HowrashokShopContext : DbContext
                         j.ToTable("ProductMaterials");
                         j.IndexerProperty<int>("Id").HasColumnName("ID");
                     });
+        });
+
+        modelBuilder.Entity<Status>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__Status__3214EC27EDF6D2E4");
+
+            entity.ToTable("Status");
+
+            entity.HasIndex(e => e.Name, "UQ__Status__737584F66C71C78A").IsUnique();
+
+            entity.Property(e => e.Id).HasColumnName("ID");
+            entity.Property(e => e.Name).HasMaxLength(50);
         });
 
         modelBuilder.Entity<TablePart>(entity =>
