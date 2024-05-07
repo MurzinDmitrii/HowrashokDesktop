@@ -35,14 +35,14 @@ namespace HowrashokDescktop.Classes
             {
                 using (var context = new HowrashokShopContext())
                 {
-                    var backupFileName = string.Format("C:/tmp/HowrashokShop[{0:dd.MM.yyy-HH:mm:ss.fff}].bak", DateTime.Now);
+                    var backupFileName = "C:/tmp/HowrashokShop.bak";
                     context.Database.ExecuteSqlRaw($"BACKUP DATABASE HowrashokShop TO DISK = '{backupFileName}'");
                 }
             }
             catch(Exception ex)
             {
                 Log.Write(ex);
-            }
+            } 
         }
     }
 }

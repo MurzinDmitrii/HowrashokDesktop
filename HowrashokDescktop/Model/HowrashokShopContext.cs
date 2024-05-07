@@ -15,15 +15,9 @@ public partial class HowrashokShopContext : DbContext
     {
     }
 
-    public virtual DbSet<Admin> Admins { get; set; }
-
-    public virtual DbSet<AdminPassword> AdminPasswords { get; set; }
-
     public virtual DbSet<Busket> Buskets { get; set; }
 
     public virtual DbSet<Category> Categories { get; set; }
-
-    public virtual DbSet<Chat> Chats { get; set; }
 
     public virtual DbSet<Client> Clients { get; set; }
 
@@ -36,8 +30,6 @@ public partial class HowrashokShopContext : DbContext
     public virtual DbSet<Discount> Discounts { get; set; }
 
     public virtual DbSet<Material> Materials { get; set; }
-
-    public virtual DbSet<Message> Messages { get; set; }
 
     public virtual DbSet<Order> Orders { get; set; }
 
@@ -57,37 +49,6 @@ public partial class HowrashokShopContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Admin>(entity =>
-        {
-            entity.HasKey(e => e.Id).HasName("PK__Admin__3214EC2730FEF03D");
-
-            entity.ToTable("Admin");
-
-            entity.HasIndex(e => e.Login, "UQ__Admin__5E55825BACE187DE").IsUnique();
-
-            entity.Property(e => e.Id).HasColumnName("ID");
-            entity.Property(e => e.FirstName).HasMaxLength(50);
-            entity.Property(e => e.LastName).HasMaxLength(50);
-            entity.Property(e => e.Login).HasMaxLength(200);
-        });
-
-        modelBuilder.Entity<AdminPassword>(entity =>
-        {
-            entity.HasKey(e => e.Id).HasName("PK__AdminPas__3214EC2754599F96");
-
-            entity.ToTable("AdminPassword");
-
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("ID");
-            entity.Property(e => e.Password).HasMaxLength(3500);
-
-            entity.HasOne(d => d.IdNavigation).WithOne(p => p.AdminPassword)
-                .HasForeignKey<AdminPassword>(d => d.Id)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__AdminPasswor__ID__76619304");
-        });
-
         modelBuilder.Entity<Busket>(entity =>
         {
             entity.HasKey(e => new { e.Id, e.ClientId, e.ProductId }).HasName("PK__Busket__80C7014197538F0F");
@@ -121,23 +82,6 @@ public partial class HowrashokShopContext : DbContext
 
             entity.Property(e => e.Id).HasColumnName("ID");
             entity.Property(e => e.Name).HasMaxLength(30);
-        });
-
-        modelBuilder.Entity<Chat>(entity =>
-        {
-            entity.HasKey(e => e.Id).HasName("PK__Chat__3214EC070178FC5D");
-
-            entity.ToTable("Chat");
-
-            entity.HasOne(d => d.Admin).WithMany(p => p.Chats)
-                .HasForeignKey(d => d.AdminId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Chat__AdminId__7755B73D");
-
-            entity.HasOne(d => d.Client).WithMany(p => p.Chats)
-                .HasForeignKey(d => d.ClientId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Chat__ClientId__756D6ECB");
         });
 
         modelBuilder.Entity<Client>(entity =>
@@ -235,20 +179,6 @@ public partial class HowrashokShopContext : DbContext
             entity.HasIndex(e => e.Name, "UQ__Material__737584F693C01360").IsUnique();
 
             entity.Property(e => e.Name).HasMaxLength(100);
-        });
-
-        modelBuilder.Entity<Message>(entity =>
-        {
-            entity.HasKey(e => e.Id).HasName("PK__Message__3214EC07DA591184");
-
-            entity.ToTable("Message");
-
-            entity.Property(e => e.MesText).HasMaxLength(2000);
-
-            entity.HasOne(d => d.Chat).WithMany(p => p.Messages)
-                .HasForeignKey(d => d.ChatId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Message__ChatId__7849DB76");
         });
 
         modelBuilder.Entity<Order>(entity =>

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using HowrashokDescktop.Model;
+using HowrashokDescktop.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +22,12 @@ namespace HowrashokDescktop.View
     /// </summary>
     public partial class AddEditOrdersView : Page
     {
-        public AddEditOrdersView()
+        private AddEditOrdersViewModel AddEditOrdersViewModel {  get; set; }
+        public AddEditOrdersView(Order order)
         {
             InitializeComponent();
+            this.AddEditOrdersViewModel = new(order);
+            this.DataContext = this.AddEditOrdersViewModel;
         }
     }
 }
