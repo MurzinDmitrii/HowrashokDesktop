@@ -34,8 +34,8 @@
                       x:Name="ProductsListView" ScrollViewer.CanContentScroll="False" Width="600">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Orientation="Horizontal" Margin="5">
-                            <Image Source="{Binding MainPhoto}" Width="100" Height="75 "/>
+                        <StackPanel Orientation="Horizontal" Margin="5" Background="{Binding ArhiveColor}" Width="550">
+                            <Image Source="{Binding MainPhoto}" Width="100" Margin="5" Height="75"/>
                             <StackPanel Orientation="Vertical">
                                 <TextBlock Text="{Binding Category.Name}" Margin="5"/>
                                 <TextBlock Text="{Binding MainCost}" Margin="5"/>
@@ -43,7 +43,8 @@
                             </StackPanel>
                             <StackPanel.ContextMenu>
                                 <ContextMenu>
-                                    <MenuItem Header="Редактировать" Click="MenuItem_Click"/>
+                                    <MenuItem Header="Редактировать" x:Name="EditItem" Click="EditItem_Click"/>
+                                    <MenuItem Header="Добавить недельную скидку" x:Name="DiscountItem" Click="DiscountItem_Click"/>
                                 </ContextMenu>
                             </StackPanel.ContextMenu>
                         </StackPanel>

@@ -72,7 +72,15 @@ namespace HowrashokDescktop.ViewModel
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Выберите корректное изображение", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                if (ex.Message.Contains("The database operation was expected to affect 1 row(s)"))
+                {
+                    var mainWindowViewModel = Application.Current.MainWindow.DataContext as MainViewModel;
+                    mainWindowViewModel.CurrentPage = new ProductsView();
+                }
+                else
+                {
+                    MessageBox.Show("Выберите корректное изображение", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
             }
         }
 
@@ -80,8 +88,22 @@ namespace HowrashokDescktop.ViewModel
         {
             if (MessageBox.Show("Удалить?", "Предупреждение", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
             {
-                DB.context.Photos.Remove(photo);
-                DB.context.SaveChanges();
+                try
+                {
+                    DB.context.Photos.Remove(photo);
+                    DB.context.SaveChanges();
+                }
+                catch (Exception ex)
+                {
+                    if (ex.Message.Contains("The database operation was expected to affect 1 row(s)"))
+                    {
+                        
+                    }
+                    else
+                    {
+                        MessageBox.Show("Выберите корректное изображение", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
+                }
             }
             Load();
         }

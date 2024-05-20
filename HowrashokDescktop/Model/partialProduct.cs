@@ -39,6 +39,13 @@ namespace HowrashokDescktop.Model
                     return "Цена не назначена";
                 }
             }
+        }public string ArhiveColor
+        {
+            get
+            {
+                if (Arhived == true) return "#5893B9";
+                else return "#C7E3F4";
+            }
         }
     }
 }

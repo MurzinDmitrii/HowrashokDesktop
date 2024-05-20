@@ -26,12 +26,21 @@ namespace HowrashokDescktop.View
         {
             InitializeComponent();
             MainViewViewModel = new();
+            this.DataContext = MainViewViewModel;
         }
 
         private void StatisticText_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             var mainWindowViewModel = Application.Current.MainWindow.DataContext as MainViewModel;
             mainWindowViewModel.CurrentPage = new CommentsView();
+        }
+
+        private void SectionBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (MainViewViewModel != null)
+            {
+                MainViewViewModel.Load(SectionBox.SelectedIndex);
+            }
         }
     }
 }

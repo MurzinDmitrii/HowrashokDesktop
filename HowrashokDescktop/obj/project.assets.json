@@ -3310,11 +3310,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Dmitrii\\Desktop\\Проекты\\HowrashokDescktop\\HowrashokDescktop\\HowrashokDescktop.csproj",
+      "projectUniqueName": "C:\\Users\\Dmitrii\\Desktop\\Диплом\\HowrashokDescktop\\HowrashokDescktop\\HowrashokDescktop.csproj",
       "projectName": "HowrashokDescktop",
-      "projectPath": "C:\\Users\\Dmitrii\\Desktop\\Проекты\\HowrashokDescktop\\HowrashokDescktop\\HowrashokDescktop.csproj",
+      "projectPath": "C:\\Users\\Dmitrii\\Desktop\\Диплом\\HowrashokDescktop\\HowrashokDescktop\\HowrashokDescktop.csproj",
       "packagesPath": "C:\\Users\\Dmitrii\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Dmitrii\\Desktop\\Проекты\\HowrashokDescktop\\HowrashokDescktop\\obj\\",
+      "outputPath": "C:\\Users\\Dmitrii\\Desktop\\Диплом\\HowrashokDescktop\\HowrashokDescktop\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -29,7 +29,23 @@ namespace HowrashokDescktop.View
             ProductsViewModel = new();
         }
 
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        private void DiscountItem_Click(object sender, RoutedEventArgs e)
+        {
+            var item = sender as MenuItem;
+            var product = item.DataContext as Product;
+            Discount discount = new()
+            {
+                DateOfSetting = DateTime.Now,
+                During = 7,
+                Size = 10,
+                ProductId = product.Id,
+                Product = product
+            };
+            DB.context.Discounts.Add(discount);
+            DB.context.SaveChanges();
+        }
+
+        private void EditItem_Click(object sender, RoutedEventArgs e)
         {
             var item = sender as MenuItem;
             var product = item.DataContext as Product;

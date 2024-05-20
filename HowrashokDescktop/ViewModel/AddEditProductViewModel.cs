@@ -1,4 +1,5 @@
-﻿using HowrashokDescktop.Classes;
+﻿using Azure;
+using HowrashokDescktop.Classes;
 using HowrashokDescktop.Model;
 using HowrashokDescktop.View;
 using System;
@@ -9,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
+using System.Windows.Media.Effects;
 
 namespace HowrashokDescktop.ViewModel
 {
@@ -39,6 +41,7 @@ namespace HowrashokDescktop.ViewModel
 
             SaveButtonCommand = new RelayCommand(_ => SaveButtonClick());
             PhotoButtonCommand = new RelayCommand(_ => PhotoButtonClick());
+            MaterialButtonCommand = new RelayCommand(_ => MaterialButtonClick());
             try
             {
                 CostSet = Math.Round(DB.context.
@@ -61,8 +64,16 @@ namespace HowrashokDescktop.ViewModel
 
         public ICommand SaveButtonCommand { get; }
         public ICommand PhotoButtonCommand { get; }
+        public ICommand MaterialButtonCommand { get; }
 
         private void PhotoButtonClick()
+        {
+            SaveButtonClick();
+            var mainWindowViewModel = Application.Current.MainWindow.DataContext as MainViewModel;
+            mainWindowViewModel.CurrentPage = new PhotosView(Product.Id);
+        }
+
+        private void MaterialButtonClick()
         {
             SaveButtonClick();
             var mainWindowViewModel = Application.Current.MainWindow.DataContext as MainViewModel;
@@ -76,12 +87,8 @@ namespace HowrashokDescktop.ViewModel
                 if (Product.Id == 0)
                 {
                     DB.context.Products.Add(Product);
+                    DB.context.SaveChanges();
                 }
-                else
-                {
-                    DB.context.Products.Update(Product);
-                }
-                DB.context.SaveChanges();
                 try
                 {
                     DB.context.Costs.Add(new Cost()
@@ -106,7 +113,15 @@ namespace HowrashokDescktop.ViewModel
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Заполните поля корректно","Ошибка",MessageBoxButton.OK,MessageBoxImage.Error);
+                if (ex.Message.Contains("The database operation was expected to affect 1 row(s)"))
+                {
+                    var mainWindowViewModel = Application.Current.MainWindow.DataContext as MainViewModel;
+                    mainWindowViewModel.CurrentPage = new ProductsView();
+                }
+                else
+                {
+                    MessageBox.Show("Заполните поля корректно", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
             }
         }
     }

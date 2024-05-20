@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Dmitrii\Desktop\Проекты\HowrashokDescktop\HowrashokDescktop\obj\Debug\net7.0-windows\
+C:\Users\Dmitrii\Desktop\Диплом\HowrashokDescktop\HowrashokDescktop\obj\Debug\net7.0-windows\
 HowrashokDescktop
 none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
-C:\Users\Dmitrii\Desktop\Проекты\HowrashokDescktop\HowrashokDescktop\App.xaml
-8207225692
+C:\Users\Dmitrii\Desktop\Диплом\HowrashokDescktop\HowrashokDescktop\App.xaml
+9-156135005
 
-481597982801
+50-431286674
 2441244877913
-MainWindow.xaml;View\AddEditOrdersView.xaml;View\AddEditProductView.xaml;View\CommentsView.xaml;View\MainView.xaml;View\OrdersView.xaml;View\PhotosView.xaml;View\ProductsView.xaml;
+MainWindow.xaml;View\AddEditOrdersView.xaml;View\AddEditProductView.xaml;View\CommentsView.xaml;View\MainView.xaml;View\MaterialView.xaml;View\OrdersView.xaml;View\PhotosView.xaml;View\ProductsView.xaml;
 
 False
 

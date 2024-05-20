@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "y4wH8RWAPWAmrDF7DbwABOrd+gzv+vzUbOgSCMgSWaAxamRSJE/EdYVNcrlZjftT+bym57ZjLWbBGHOkeBjwpQ==",
+  "dgSpecHash": "qFGP6kHZgitO+s2dbE5xRWHT9bPdQgeqSybgT5A2HpFBGdOWP0rxW8e/Uf387cLVLbViIKr1eCZ3RLZqdX9Tdw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Dmitrii\\Desktop\\Проекты\\HowrashokDescktop\\HowrashokDescktop\\HowrashokDescktop.csproj",
+  "projectFilePath": "C:\\Users\\Dmitrii\\Desktop\\Диплом\\HowrashokDescktop\\HowrashokDescktop\\HowrashokDescktop.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dmitrii\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Dmitrii\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
