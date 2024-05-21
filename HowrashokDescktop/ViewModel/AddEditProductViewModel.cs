@@ -77,7 +77,7 @@ namespace HowrashokDescktop.ViewModel
         {
             SaveButtonClick();
             var mainWindowViewModel = Application.Current.MainWindow.DataContext as MainViewModel;
-            mainWindowViewModel.CurrentPage = new PhotosView(Product.Id);
+            mainWindowViewModel.CurrentPage = new MaterialView(Product.Id);
         }
 
         private void SaveButtonClick()

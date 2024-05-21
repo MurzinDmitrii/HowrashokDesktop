@@ -58,10 +58,22 @@
                 Height="30"
                 materialDesign:ButtonAssist.CornerRadius="15"
                 Background="#5893B9"
-                Width="100"
+                Width="120"
                 Style="{StaticResource MaterialDesignRaisedDarkButton}"
                 ToolTip="Редактировать фото товара">
                 <TextBlock Text="Фото" />
+            </Button>
+            <Button
+                x:Name="MaterialButton"
+                Command="{Binding MaterialButtonCommand}"
+                Margin="5"
+                Height="30"
+                materialDesign:ButtonAssist.CornerRadius="15"
+                Background="#5893B9"
+                Width="120"
+                Style="{StaticResource MaterialDesignRaisedDarkButton}"
+                ToolTip="Изменить материалы">
+                <TextBlock Text="Материалы" Cursor="" />
             </Button>
             <Button
                 x:Name="MainButton"
@@ -70,7 +82,7 @@
                 Height="30"
                 materialDesign:ButtonAssist.CornerRadius="15"
                 Background="#5893B9"
-                Width="100"
+                Width="120"
                 Style="{StaticResource MaterialDesignRaisedDarkButton}"
                 ToolTip="Сохранить внесенные изменения">
                 <TextBlock Text="Сохранить" />
