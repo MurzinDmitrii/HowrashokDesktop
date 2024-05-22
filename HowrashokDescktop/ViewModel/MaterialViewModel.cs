@@ -48,7 +48,7 @@ namespace HowrashokDescktop.ViewModel
         private void BackButtonClick()
         {
             string sqlExpressionClient = "exec ClearProductMaterial @id = " + product.Id;
-            using (SqlConnection connection = new SqlConnection(GlobalClass.ConnectionString))
+            using (SqlConnection connection = new SqlConnection(WorkWithJson.LoadJson().ConnectionString))
             {
                 connection.Open();
 

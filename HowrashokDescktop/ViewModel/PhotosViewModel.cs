@@ -61,7 +61,7 @@ namespace HowrashokDescktop.ViewModel
                     DB.context.SaveChanges();
                     try
                     {
-                        File.Copy(openFileDialog.FileName, GlobalClass.Photopath + System.IO.Path.GetFileName(openFileDialog.FileName));
+                        File.Copy(openFileDialog.FileName, WorkWithJson.LoadJson().Photopath + System.IO.Path.GetFileName(openFileDialog.FileName));
                     }
                     catch
                     {

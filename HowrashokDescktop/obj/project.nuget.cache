@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "qFGP6kHZgitO+s2dbE5xRWHT9bPdQgeqSybgT5A2HpFBGdOWP0rxW8e/Uf387cLVLbViIKr1eCZ3RLZqdX9Tdw==",
+  "dgSpecHash": "WIx3Drm8pRgJrmTnqwu52OHZQsK/03AYiVCESWlQ6+5drYxzGqBxuEAicKaBWFrB6nyDSYVM46NCGGa2ytXfNg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Dmitrii\\Desktop\\Диплом\\HowrashokDescktop\\HowrashokDescktop\\HowrashokDescktop.csproj",
   "expectedPackageFiles": [
@@ -48,6 +48,7 @@
     "C:\\Users\\Dmitrii\\.nuget\\packages\\microsoft.web.webview2\\1.0.864.35\\microsoft.web.webview2.1.0.864.35.nupkg.sha512",
     "C:\\Users\\Dmitrii\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\Dmitrii\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\Dmitrii\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\Dmitrii\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\Dmitrii\\.nuget\\packages\\system.configuration.configurationmanager\\6.0.1\\system.configuration.configurationmanager.6.0.1.nupkg.sha512",
     "C:\\Users\\Dmitrii\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.1\\system.diagnostics.diagnosticsource.6.0.1.nupkg.sha512",

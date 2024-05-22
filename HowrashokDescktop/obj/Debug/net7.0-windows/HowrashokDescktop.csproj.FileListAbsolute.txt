@@ -186,3 +186,4 @@ C:\Users\Dmitrii\Desktop\Диплом\HowrashokDescktop\HowrashokDescktop\obj\De
 C:\Users\Dmitrii\Desktop\Диплом\HowrashokDescktop\HowrashokDescktop\obj\Debug\net7.0-windows\ref\HowrashokDescktop.dll
 C:\Users\Dmitrii\Desktop\Диплом\HowrashokDescktop\HowrashokDescktop\obj\Debug\net7.0-windows\View\MaterialView.g.cs
 C:\Users\Dmitrii\Desktop\Диплом\HowrashokDescktop\HowrashokDescktop\obj\Debug\net7.0-windows\View\MaterialView.baml
+C:\Users\Dmitrii\Desktop\Диплом\HowrashokDescktop\HowrashokDescktop\bin\Debug\net7.0-windows\Newtonsoft.Json.dll

@@ -13,7 +13,7 @@ namespace HowrashokDescktop.Model
         {
             get
             {
-                string photopath = GlobalClass.Photopath;
+                string photopath = WorkWithJson.LoadJson().Photopath;
                 return photopath + Photopath;
             }
         }

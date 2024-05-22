@@ -84,32 +84,35 @@ namespace HowrashokDescktop.ViewModel
         {
             try
             {
-                if (Product.Id == 0)
+                using(HowrashokShopContext context = new())
                 {
-                    DB.context.Products.Add(Product);
-                    DB.context.SaveChanges();
-                }
-                try
-                {
-                    DB.context.Costs.Add(new Cost()
+                    if (Product.Id == 0)
                     {
-                        DateOfSetting = DateTime.Now,
-                        Size = Convert.ToDecimal(CostSet),
-                        ProductId = Product.Id
-                    });
-                }
-                catch
-                {
-                    DB.context.Costs.Add(new Cost()
+                        context.Products.Add(Product);
+                        context.SaveChanges();
+                    }
+                    try
                     {
-                        DateOfSetting = DateTime.Now,
-                        Size = 100,
-                        ProductId = Product.Id
-                    });
+                        context.Costs.Add(new Cost()
+                        {
+                            DateOfSetting = DateTime.Now,
+                            Size = Convert.ToDecimal(CostSet),
+                            ProductId = Product.Id
+                        });
+                    }
+                    catch
+                    {
+                        context.Costs.Add(new Cost()
+                        {
+                            DateOfSetting = DateTime.Now,
+                            Size = 100,
+                            ProductId = Product.Id
+                        });
+                    }
+                    context.SaveChanges();
+                    var mainWindowViewModel = Application.Current.MainWindow.DataContext as MainViewModel;
+                    mainWindowViewModel.CurrentPage = new ProductsView();
                 }
-                DB.context.SaveChanges();
-                var mainWindowViewModel = Application.Current.MainWindow.DataContext as MainViewModel;
-                mainWindowViewModel.CurrentPage = new ProductsView();
             }
             catch (Exception ex)
             {

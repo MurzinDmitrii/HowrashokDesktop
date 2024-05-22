@@ -29,8 +29,6 @@ namespace HowrashokDescktop
             WrapClass.Wrap(this);
             Closing += OnWindowClosing;
             InitializeComponent();
-            GlobalClass.Photopath = "C:\\Users\\Dmitrii\\Desktop\\Диплом\\HowrashokShop\\HowrashokShop\\wwwroot\\Images\\";
-            GlobalClass.ConnectionString = "Data Source=127.0.0.1,1433;User=Dmitrii;Password=Dima005dimon;Initial Catalog=HowrashokShop; TrustServerCertificate=True";
             MainViewModel = new();
             TimerClass timerClass = new TimerClass();
         }
