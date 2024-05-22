@@ -44,6 +44,7 @@ namespace HowrashokDescktop.ViewModel
 
         private void CheckButtonClick()
         {
+            Clipboard.SetText(Order.Client.Email);
             var url = "https://yoomoney.ru/self-employed/receipts";
             System.Diagnostics.Process.Start(new ProcessStartInfo
             {
